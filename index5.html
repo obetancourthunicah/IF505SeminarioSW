@@ -3,7 +3,7 @@
   <head>
     <meta charset="utf-8"/>
     <meta name="viewport" content="width=device-width, initial-scale=1"/>
-    <title>Test 1</title>
+    <title>REDDIS API DEMO</title>
     <link rel="stylesheet" href="c/jquery.mobile.min.css"/>
     <script src="j/jquery.min.js" ></script>
     <script src="j/jquery.mobile.min.js" ></script>
@@ -42,10 +42,8 @@
                   "http://www.reddit.com/r/honduras/new.json",
                   {},
                   function(resData) {
-                      console.log(resData);
                       var items = resData.data.children,
                           htmlstr = '';
-
                       for(i in items){
                           var idata = items[i].data,
                               jsonUrl = "http://www.reddit.com" + idata.permalink.substr(0, idata.url.length-2) + ".json",
@@ -64,12 +62,9 @@
                                       $(this).data("href"),
                                       {},
                                       function(resDetData){
-
                                           var item = resDetData[0].data.children[0].data;
-                                          console.log(item);
                                           $("#ntitle").html(item.title);
                                           (item.selftext == "") ? $("#ntext").hide():$("#ntext").html(item.selftext).show();
-                                          //?nthumb
                                           if (item.thumbnail!="" && item.thumbnail!="self" && item.thumbnail!="default") {
                                               $("#nthumb").attr("src", item.thumbnail).show();
                                           }else{
