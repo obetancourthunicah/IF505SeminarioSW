@@ -1,0 +1,146 @@
+<!DOCTYPE html>
+<html>
+<head>
+  <meta charset="utf-8"/>
+  <meta name="viewport" content="width=device-width, initial-scale=1"/>
+  <title>Test 1</title>
+  <link rel="stylesheet" href="c/jquery.mobile.min.css"/>
+  <script src="j/jquery.min.js" ></script>
+  <script src="j/jquery.mobile.min.js" ></script>
+</head>
+<body>
+  <!--  Single Page Application SPA -->
+  <!-- JQM MultiPage Template -->
+  <div data-role="page" id="pag1">
+    <div data-role="header" data-position ="fixed">
+      <h1>Autorize #1</h1>
+    </div>
+    <div role="main" class="ui-content">
+      <ul data-role="listview" data-inset="true">
+        <li>
+          <p href># Cuenta: 0801-1999-22222</p>
+        </li>
+        <li data-icon="check">
+          <a href="#pag2"><h4>0801-1999-22222</h4>
+          <p>1) 10 veces o más reprobadas las asignaturas</p></a>
+        </li>
+        <li data-icon="check">
+          <a href="#pag3"><h4>0801-1999-22222</h4>
+          <p>2) 4 veces o más reprobadas la misma asignatura</p></a>
+        </li>
+        <li data-icon="check">
+          <a href="#pag4"><h4>0801-1999-22222</h4>
+          <p>3) Cupo adicional en sección</p></a>
+        </li>
+        <li data-icon="check">
+          <a href="#pag5"><h4>0801-1999-22222</h4>
+          <p>4) Adicionar asignatura sin co-requisito aprobado</p></a>
+        </li>
+      </ul>
+  </div>
+  <div data-role="footer" data-position="fixed">
+  </div>
+</div>
+
+<div data-role="page" id="pag2">
+  <div data-role="header"  data-position ="fixed">
+    <h1>Autorize #1</h1>
+  </div>
+  <div role="main" class="ui-content">
+    <h2># Autorización 1 </h2>
+    <p>
+      10 veces o más reprobadas las asignaturas
+    </p>
+    <div class="ui-field-contain">
+      <label for="select1">Seleccione opción:</label>
+      <select id="select1" name="select1">
+        <option value="1">Rechazar solicitud</option>
+        <option value="2">Rechazar pero enviar notificación</option>
+        <option value="3">Aprobar Solicitud</option>
+        <option value="4">No Aplica</option>
+      </select>
+    </div>
+    <a href="#pag1" id ="boton" data-role="button" >Confirmar</a>
+  </div>
+
+  <div data-role="footer" data-position="fixed">
+  </div>
+</div>
+
+<div data-role="page" id="pag3">
+  <div data-role="header"  data-position ="fixed">
+    <h1>Autorize #1</h1>
+  </div>
+  <div role="main" class="ui-content">
+    <h2># Autorización 2 </h2>
+    <p>
+      4 veces o más reprobadas la misma asignatura
+    </p>
+    <div class="ui-field-contain">
+      <label for="select1">Seleccione opción:</label>
+      <select id="select1" name="select1">
+        <option value="1">Rechazar solicitud</option>
+        <option value="2">Rechazar pero enviar notificación</option>
+        <option value="3">Aprobar Solicitud</option>
+        <option value="4">No Aplica</option>
+      </select>
+    </div>
+    <a href="#pag1" id ="boton" data-role="button" >Confirmar</a>
+  </div>
+
+  <div data-role="footer" data-position="fixed">
+  </div>
+</div>
+
+<div data-role="page" id="pag4">
+  <div data-role="header"  data-position ="fixed">
+    <h1>Autorize #1</h1>
+  </div>
+  <div role="main" class="ui-content">
+    <h2># Autorización 3 </h2>
+    <p>
+      Cupo adicional en sección
+    </p>
+    <div class="ui-field-contain">
+      <label for="select1">Seleccione opción:</label>
+      <select id="select1" name="select1">
+        <option value="1">Rechazar solicitud</option>
+        <option value="2">Rechazar pero enviar notificación</option>
+        <option value="3">Aprobar Solicitud</option>
+        <option value="4">No Aplica</option>
+      </select>
+    </div>
+    <a href="#pag1" id ="boton" data-role="button" >Confirmar</a>
+  </div>
+
+  <div data-role="footer" data-position="fixed">
+  </div>
+</div>
+
+<div data-role="page" id="pag5">
+  <div data-role="header"  data-position ="fixed">
+    <h1>Autorize #1</h1>
+  </div>
+  <div role="main" class="ui-content">
+    <h2># Autorización 4 </h2>
+    <p>
+      Adicionar asignatura sin co-requisito aprobado
+    </p>
+    <div class="ui-field-contain">
+      <label for="select1">Seleccione opción:</label>
+      <select id="select1" name="select1">
+        <option value="1">Rechazar solicitud</option>
+        <option value="2">Rechazar pero enviar notificación</option>
+        <option value="3">Aprobar Solicitud</option>
+        <option value="4">No Aplica</option>
+      </select>
+    </div>
+    <a href="#pag1" id ="boton" data-role="button" >Confirmar</a>
+  </div>
+
+  <div data-role="footer" data-position="fixed">
+  </div>
+</div>
+
+</body>
+</html>

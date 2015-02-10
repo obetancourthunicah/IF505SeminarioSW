@@ -1,0 +1,160 @@
+<!DOCTYPE html>
+<html>
+<head>
+  <meta charset="utf-8"/>
+  <meta name="viewport" content="width=device-width, initial-scale=1"/>
+  <title>Test 1</title>
+  <link rel="stylesheet" href="c/jquery.mobile.min.css"/>
+  <script src="j/jquery.min.js" ></script>
+  <script src="j/jquery.mobile.min.js" ></script>
+</head>
+<body>
+  <!--  Single Page Application SPA -->
+  <!-- JQM MultiPage Template -->
+  <div data-role="page" id="pag1">
+    <div data-role="header" data-position ="fixed">
+      <h1>App 1.1</h1>
+    </div>
+    <div role="main" class="ui-content">
+      <h1>Curriculum Vitae</h1>
+      <ul data-role="listview" data-inset="true">
+        <li>
+          <a href>Datos Generales</a>
+        </li>
+        <li>
+          <a href>Experiencia Laboral</a>
+        </li>
+        <li>
+          <a href>Educación</a>
+        </li>
+        <li>
+          <a href>Otros Elementos</a>
+        </li>
+      </ul>
+        <a href="#pag2">Ir a página 2</a>
+        <a href="#pag3">Ir a página 3</a>
+        <a href="#pag4">Ir a página 4</a>
+      </p>
+    </div>
+    <div data-role="footer" data-position="fixed">
+      <h4>Footer Aqui</h4>
+    </div>
+  </div>
+
+  <div data-role="page" id="pag2">
+    <div data-role="header"  data-position ="fixed">
+      <h1>App 2</h1>
+    </div>
+    <div role="main" class="ui-content">
+      <ul data-role="listview" data-filter="true" data-filter-placeholder="Buscar Alumno" data-autodividers="true">
+        <li>
+          <a href>Alejandra<span class="ui-li-count">45</span></a>
+        </li>
+        <li>
+          <a href>Alejandro</a>
+        </li>
+        <li>
+          <a href>David</a>
+        </li>
+        <li>
+          <a href>Jansy</a>
+        </li>
+      </ul>
+  </div>
+  <div data-role="footer" data-position="fixed">
+    <h4>Footer Aqui</h4>
+  </div>
+</div>
+
+<div data-role="page" id="pag3">
+  <div data-role="header"  data-position ="fixed">
+    <h1>App 3</h1>
+  </div>
+  <div role="main" class="ui-content">
+    <ul data-role="listview" data-filter="true" data-filter-placeholder="Buscar Alumno"
+    data-autodividers="true">
+      <li data-icon="info">
+        <a href><img src="i/img.gif"/> Alejandra<span class="ui-li-count">45</span></a>
+      </li>
+      <li data-icon="check">
+        <a href>Alejandro</a>
+      </li>
+      <li data-icon="forbidden">
+        <a href><h4><img src="i/img.gif"/>David</a></h4>
+        <p>ola ke ashe</p>
+      </li>
+      <li data-icon="refresh">
+        <a href>Jansy</a>
+      </li>
+      <li>
+        <a href>Kenmy</a>
+      </li>
+      <li>
+        <a href>Marcos</a>
+      </li>
+      <li>
+        <a href>Pablo</a>
+      </li>
+    </ul>
+  </div>
+  <div data-role="footer" data-position="fixed">
+    <h4>Footer Aqui</h4>
+  </div>
+</div>
+
+
+<div data-role="page" id="pag4">
+  <div data-role="header"  data-position ="fixed">
+    <h1>App 4</h1>
+  </div>
+  <div role="main" class="ui-content">
+
+    <form id="forma1">
+      <div class="ui-field-contain">
+        <label for="txt1">Un campo texto</label>
+          <input type="text" id="txt1"
+          name="txt1" placeholder="un campo de texto"/>
+      </div>
+
+      <div class="ui-field-contain">
+        <label for="slider1">Un Slider</label>
+        <input type="range" id="slider1"
+        name="slider1" min="0" max="200" value="50" step="10"/>
+      </div>
+
+      <div class="ui-field-contain">
+        <div data-role="rangeslider">
+        <label for="slider2a">Asistólica</label>
+        <input type="range" id="slider2a"
+        name="slider2a" min="0" max="200" value="75" step="1"/>
+        <label for="slider2b">Astólica</label>
+        <input type="range" id="slider2b"
+        name="slider2b" min="0" max="200" value="110" step="1"/>
+      </div>
+    </div>
+
+    <div class="ui-field-contain">
+      <label for="select1">Un Select</label>
+      <select id="select1" name="select1">
+        <option value="1">item1</option>
+        <option value="2">item2</option>
+        <option value="3">item3</option>
+        <option value="4">item4</option>
+        <option value="5">item5</option>
+      </select>
+    </div>
+
+
+    </form>
+
+</div>
+<div data-role="footer" data-position="fixed">
+  <h4>Footer Aqui</h4>
+</div>
+</div>
+
+
+
+
+</body>
+</html>
