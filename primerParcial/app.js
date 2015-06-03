@@ -92,6 +92,65 @@ app.get("/minombre", function(req,res){
 // nombreCompleto
 // identidad
 
+//tarea resuelta
+app.get("/mostrarperfil",function(req,res){
+    // var perfil = {
+    //     "primerNombre":"Orlando",
+    //     "segundoNombre":"José",
+    //     "apellidos":"Betancourth",
+    //     "email":"obetancourthunicah@gmail.com",
+    //     "genero":"Masculino",
+    //     "direccion":"Tegucigalps",
+    //     "profesion":"Ing.Ciencias de la Computación"
+    // };
+
+    //res.render("datospersonales",perfil);
+    res.render("datospersonales", {
+        "primerNombre":"Orlando",
+        "segundoNombre":"José",
+        "apellidos":"Betancourth",
+        "email":"obetancourthunicah@gmail.com",
+        "genero":"Masculino",
+        "direccion":"Tegucigalps",
+        "profesion":"Ing.Ciencias de la Computación",
+        "roles":[
+                    {"rol":"Administrador"},
+                    {"rol":"Security Audit"}
+                ]
+    });
+});
+
+//Ejercicio 2
+/*Por medio de un handler (manejador) get
+eviaremos al cliente un formulario
+y por handler post vamos a recibir
+y procesar los datos del formulario.
+*/
+
+app.get(
+    "/editarperfil",
+    function(req,res){
+        var datos={
+            "primerNombre" :"",
+            "segundoNombre":""
+        };
+        res.render("editarperfil", datos);
+    }
+);
+app.post(
+    "/editarperfil",
+    function(req,res){
+        var datos={
+            "primerNombre" :req.body.txtPrimerNombre,
+            "segundoNombre":req.body.txtSegundoNombre,
+            "mensaje": req.body.txtPrimerNombre + ' '
+                     + req.body.txtSegundoNombre
+        };
+        res.render("editarperfil", datos);
+    }
+);
+
+
 
 /* +++++++++++++++++++++*/
 // catch 404 and forward to error handler

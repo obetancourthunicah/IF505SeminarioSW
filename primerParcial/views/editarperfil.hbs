@@ -1,0 +1,23 @@
+<form action="editarperfil" method="post">
+    <label for="txtPrimerNombre">
+        Primer Nombre</label>
+    <input type="text"
+        name="txtPrimerNombre"
+        id="txtPrimerNombre"
+        placeholder="Primer Nombre"
+        value="{{primerNombre}}" /></br>
+
+    <label for="txtSegundoNombre">
+        Segundo Nombre</label>
+    <input type="text"
+        name="txtSegundoNombre"
+        id="txtSegundoNombre"
+        placeholder="Segundo Nombre"
+        value="{{segundoNombre}}" /></br>
+
+    <input type="submit" value="Guardar"
+        id="btnGuardar" name="btnGuardar" />
+</form>
+<div>
+    {{mensaje}}
+</div>
