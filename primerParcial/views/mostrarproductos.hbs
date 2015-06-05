@@ -1,0 +1,46 @@
+<h1>Productos</h1>
+<table>
+    <tr>
+        <th>
+            Código
+        </th>
+        <th>
+            Producto
+        </th>
+        <th>
+            Precio
+        </th>
+        <th>
+            Stock
+        </th>
+        <th>
+            W Query
+        </th>
+        <th>
+            REST
+        </th>
+    </tr>
+    {{#each productos}}
+        <tr>
+            <td>
+                {{codigo}}
+            </td>
+            <td>
+                {{nombre}}
+            </td>
+            <td>
+                {{precio}}
+            </td>
+            <td>
+                {{stock}}
+            </td>
+            <td>
+                <a href="/producto?codigo={{codigo}}">Mostrar</a>
+            </td>
+            <td>
+                <a href="/productos/{{codigo}}">Mostrar</a>
+            </td>
+        </tr>
+    {{/each}}
+
+</table>
