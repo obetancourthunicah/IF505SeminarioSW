@@ -1,0 +1,16 @@
+{
+    "titulo":"",
+    "isbn":"",
+    "autores":[ {
+                    "nombres":"Autor",
+                    "apellidos":"Apellidos"
+                },
+                {
+                    "nombres":"Autor 2",
+                    "apellidos":"Apellidos 2"
+                }],
+    "palabrasClave":["Clave 1", "Clave 2", "Clave 3"],
+    "activo":true,
+    "copias":5,
+    "estado":"Activo"
+}
