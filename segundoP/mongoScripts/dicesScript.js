@@ -43,3 +43,14 @@ db.<colección>.find({criterios de filtro},{proyeccion })
 
 db.dices.find({$and:[{"docnum":{$gte:20}},{"docnum":{$lte:30}}]},
                 {"par9":1,"_id":0});
+// Para actualizar un documento, si el atributo existe lo
+// le asigna el valor
+// Sino existe, crea el atributo y le asigna el valor
+db.dices.update({"docnum":500}, {"$set":{"usuario":"obetancourth"}});
+// Incrementa el valor de un atribuot por el valor establecido
+// si no existe el atributo lo crea con el primer incremento
+db.dices.update({"docnum":500}, {"$inc":{"visit":1}});
+//El tercer paramentro de update son opciones, la opcion
+//multi permite que mongodb actualice varios documentos
+//de un solo.
+db.dice.update({"docnum":500}, {"$inc":{"visit":1}}, {"multi":1});
