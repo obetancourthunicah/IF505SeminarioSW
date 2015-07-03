@@ -30,11 +30,6 @@ for(var i=1; i <= 1000; i++){
  db.dices.insert(doc);
 }
 
-
-
-
-
-
 db.dices.find({$and:[{"docnum":{$gte:20}},{"docnum":{$lte:30}}]}
              , {"docnum":1,"parMean":1} );
 
@@ -54,3 +49,44 @@ db.dices.update({"docnum":500}, {"$inc":{"visit":1}});
 //multi permite que mongodb actualice varios documentos
 //de un solo.
 db.dice.update({"docnum":500}, {"$inc":{"visit":1}}, {"multi":1});
+
+
+//Pare encontrar documentos que no tiene un atributo
+// se puede usar en el documento json de criterios
+// la funcion $exists
+// ejemplo para sacara todos los documentos que
+// tiene el atributo visit
+var query = {"visit":{"$exists":1}}
+// si deseo sacar todos los documentos que NO
+// tengan declarado el atributo visit
+var query = {"visit":{"$exists":0}}
+
+//Actualización de Arreglos Atómicos
+//Se da el caso de que queremos agregar un Arreglo
+//con valores atómicos ejemplo unas palabras claves
+//queremos agregar a todos los documentos
+// que tengan parMean el valor 2 y 3 la palabra
+// clave CNT
+db.dices.update({"parMean":{"$in":[2,3]}}, {"$push":{"keys":"CNT"}},{"multi":1});
+//Si el atributo no existe, mongodb crea el arreglo con un elemento
+//Si el atributo existe y es un arreglo, mongodb agrega el nuevo
+//elemento al final del arreglo
+//Si el atributo existe y no es un arreglo mongodb lanzara un error
+//y no procederá a actualizar el documento.
+
+//Borrar Documentos de una colección
+//para eliminar un registro de una colección
+//usamos  db.<<coleccion>>.remove(<<CriteriosJson>>);
+//ejemplo queremos borrar el documento 99, 100 y 101 de la colección
+//dices.
+db.dices.remove({"docnum":{"$in":[99,100,101]}});
+// hay que tomar en cuenta que remove remueve todos los documentos
+// a diferencia del update que solo actualiza un documento a menos que
+// se especifique la opción multi en verdadero. Asi que no es correcto
+// ejecutar db.dices.remove({});
+
+//Para eliminar un colección
+//db.<<coleccion>>.drop();
+//ejemplo para borar toda la colección de dices
+
+db.dices.drop();
